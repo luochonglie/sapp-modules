@@ -1,0 +1,151 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<!-- groupId，必须设置，为项目组唯一标志，生成的路径也是依此生成， 如com.sm.sapp生成的相对路径为：/com/sm/sapp -->
+	<groupId>com.sm.sapp</groupId>
+	<!-- artifactId，必须设置，为项目的名称 -->
+	<artifactId>sapp</artifactId>
+	<!-- version，必须设置，为项目版本 -->
+	<version>1.0</version>
+	<!-- packaging，打包的机制，如pom, jar, maven-plugin, ejb, war, ear, rar, par； 通常父级模块为pom，子级组件模块为jar，站点模块为war -->
+	<packaging>pom</packaging>
+	<!-- name，可选，对项目名称的描述 -->
+	<name>sapp</name>
+	<description>顶层模块</description>
+
+	<!-- 定义jar包的版本号变量，供各个模块引用。引用示例：${jetty-version} -->
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.version>1.0</project.version>
+		<junit.version>4.12</junit.version>
+		<mongodb.version>2.9.1</mongodb.version>
+		<spring.version>4.3.2.RELEASE</spring.version>
+		<spring.data.version>1.9.4.RELEASE</spring.data.version>
+		<hibernate.version>4.3.1.Final</hibernate.version>
+		<jacson.version>1.9.12</jacson.version>
+		<servlet.version>2.5</servlet.version>
+		<dom4j.version>1.6.1</dom4j.version>
+		<slf4j.version>1.7.21</slf4j.version>
+		<jetty-version>8.1.0.v20120127</jetty-version>
+		<mybatis.version>3.4.1</mybatis.version>
+		<mybatis.spring.version>1.3.1</mybatis.spring.version>
+	</properties>
+
+	<!-- 依赖jar包的管理 -->
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>servlet-api</artifactId>
+				<version>${servlet.version}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>dom4j</groupId>
+				<artifactId>dom4j</artifactId>
+				<version>${dom4j.version}</version>
+				<scope>compile</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-log4j12</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+
+			<!-- Spring-core -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-core</artifactId>
+				<version>4.3.2.RELEASE</version>
+			</dependency>
+
+
+			<!-- Spring MVC -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-web</artifactId>
+				<version>${spring.version}</version>
+				<scope>compile</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-webmvc</artifactId>
+				<version>${spring.version}</version>
+				<scope>compile</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-oxm</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<!-- 单元测试组件junit -->
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${junit.version}</version>
+				<scope>test</scope>
+			</dependency>
+			<!-- 引入Spring的测试组件,用于测试基于SpringMVC开发的服务 -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-test</artifactId>
+				<version>${spring.version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-mock</artifactId>
+				<version>2.0.8</version>
+				<scope>test</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<!-- 插件管理 -->
+		<pluginManagement>
+			<plugins>
+				<!-- maven-resources-plugin 用来处理src/main/resources下的资源文件 -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>2.4.3</version>
+					<configuration>
+						<encoding>${project.build.sourceEncoding}</encoding>
+					</configuration>
+				</plugin>
+				<!-- maven-compiler-plugin 用来编译src/main/java/目录下的主源码 -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>2.3.2</version>
+					<configuration>
+						<source>1.6</source>
+						<target>1.6</target>
+						<encoding>${project.build.sourceEncoding}</encoding>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+	<!-- maven项目子模块配置。 在默认情况下，maven会根据多模块配置构建所有的模块， maven还会根据模块间的依赖关系自动计算构建顺序，以确保被依赖的模块会先得以构建。 -->
+	<modules>
+		<module>sapp-portal</module> 	<!-- 表现层的web站点 -->
+		<module>sapp-services</module>	<!-- Service层，处理业务逻辑，放一些Service接口和实现 -->
+		<module>sapp-tiles</module>		<!-- 功能模块，此示例模块用来生成验证码图片 -->
+		<module>sapp-common</module>	<!-- 通用基础类库 -->
+		<module>sapp-dao-jpa-hibernate</module>
+		<module>sapp-dao-mybatis</module>
+	</modules>
+
+	<!-- 为更好地理解请参考 http://juvenshun.iteye.com/blog/305865，以下是部分摘要: 一个简单的Maven模块结构是这样的： 
+		—— app-parent |—— pom.xml (pom) | |—— app-util | |— pom.xml (jar) | |—— app-dao 
+		| |— pom.xml (jar) | |—— app-service | |— pom.xml (jar) | |—— app-web |— 
+		pom.xml (war) 用项目层次的划分替代包层次的划分能给我们带来如下好处： 1. 方便重用，如果你有一个新的项目需要用到app-dao和app-service，添加对它们的依赖即可，你不再需要去依赖一个WAR。 
+		而有些模块，如app-util，完全可以渐渐进化成公司的一份基础工具类库，供所有项目使用。这是模块化最重要的一个目的。 2. 由于你现在划分了模块，每个模块的配置都在各自的pom.xml里，不用再到一个混乱的纷繁复杂的总的POM中寻找自己的配置。 
+		3. 如果你只是在app-dao上工作，你不再需要build整个项目，只要在app-dao目录运行mvn命令进行build即可，这样可以节省时间，尤其是当项目越来越复杂，build越来越耗时后。 
+		4. 某些模块，如app-util被所有人依赖，但你不想给所有人修改，现在你完全可以从这个项目结构出来，做成另外一个项目，svn只给特定的人访问，但仍提供jar给别人使用。 
+		5. 多模块的Maven项目结构支持一些Maven的更有趣的特性（如DepencencyManagement），这留作以后讨论。 -->
+
+</project>

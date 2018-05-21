@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="performer" class="com.demo.perform.impl.PerformerImpl" />
+
+	<bean id="duke" class="com.demo.perform.impl.Juggler">
+		<constructor-arg name="beanBags" value="10" />
+	</bean>
+
+	<bean id="poeticDuke" class="com.demo.perform.impl.PoeticJuggler">
+		<constructor-arg name="beanBags" value="10" />
+		<constructor-arg name="poem">
+			<bean class="com.demo.perform.impl.Sonnet29" />
+		</constructor-arg>
+	</bean>
+
+
+	<bean id="singletonBean" class="com.demo.perform.impl.SingletonBean"
+		factory-method="getInstance" />
+
+	<bean id="initialAndDestoryBean" class="com.demo.perform.impl.InitialAndDestoryBean"
+		init-method="initial" destroy-method="destory" />
+
+	<bean id="setterService" class="com.demo.perform.impl.SetterService"
+		p:num="100" p:performer-ref="performer" />
+
+</beans>

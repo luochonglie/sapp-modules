@@ -1,0 +1,44 @@
+[WARN ][2017-04-28 13:56:00,173][main][org.hibernate.engine.jdbc.spi.SqlExceptionHelper] - SQL Error: 0, SQLState: null
+[ERROR][2017-04-28 13:56:00,192][main][org.hibernate.engine.jdbc.spi.SqlExceptionHelper] - Cannot create PoolableConnectionFactory (ÓÃ»§ 'sa' µÇÂ¼Ê§°Ü¡£ ClientConnectionId:a3e86585-cc95-4ca1-80a4-abffaba14223)
+[INFO ][2017-04-28 13:56:00,197][main][org.hibernate.engine.internal.StatisticalLoggingSessionEventListener] - Session Metrics {
+    42197198 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    65222988 nanoseconds spent preparing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+[WARN ][2017-04-28 13:56:00,253][main][org.hibernate.engine.jdbc.spi.SqlExceptionHelper] - SQL Error: 0, SQLState: null
+[ERROR][2017-04-28 13:56:00,254][main][org.hibernate.engine.jdbc.spi.SqlExceptionHelper] - Cannot create PoolableConnectionFactory (ÓÃ»§ 'sa' µÇÂ¼Ê§°Ü¡£ ClientConnectionId:bde75349-9a0c-4f80-bffb-814459ec9c45)
+[INFO ][2017-04-28 13:56:00,255][main][org.hibernate.engine.internal.StatisticalLoggingSessionEventListener] - Session Metrics {
+    42565830 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    43988183 nanoseconds spent preparing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+[WARN ][2017-04-28 13:56:00,328][main][org.hibernate.engine.jdbc.spi.SqlExceptionHelper] - SQL Error: 0, SQLState: null
+[ERROR][2017-04-28 13:56:00,328][main][org.hibernate.engine.jdbc.spi.SqlExceptionHelper] - Cannot create PoolableConnectionFactory (ÓÃ»§ 'sa' µÇÂ¼Ê§°Ü¡£ ClientConnectionId:dfb1726c-37f4-419e-b6f6-9e16187a6ca1)
+[INFO ][2017-04-28 13:56:00,329][main][org.hibernate.engine.internal.StatisticalLoggingSessionEventListener] - Session Metrics {
+    39955901 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+[INFO ][2017-04-28 13:56:00,333][Thread-1][org.springframework.context.support.GenericApplicationContext] - Closing org.springframework.context.support.GenericApplicationContext@522305c2: startup date [Fri Apr 28 13:55:56 CST 2017]; root of context hierarchy
+[INFO ][2017-04-28 13:56:00,339][Thread-1][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] - Closing JPA EntityManagerFactory for persistence unit 'default'

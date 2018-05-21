@@ -1,0 +1,91 @@
+[INFO ][2017-04-28 13:55:55,940][main][org.springframework.test.context.support.DefaultTestContextBootstrapper] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[INFO ][2017-04-28 13:55:55,980][main][org.springframework.test.context.support.DefaultTestContextBootstrapper] - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+[INFO ][2017-04-28 13:55:55,982][main][org.springframework.test.context.support.DefaultTestContextBootstrapper] - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4d84aa4e, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@40c90ea4, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4fe05236, org.springframework.test.context.transaction.TransactionalTestExecutionListener@10358032, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@28735aee]
+[INFO ][2017-04-28 13:55:56,416][main][org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from file [D:\work\svn_home\dev1.svn\sapp-modules\sapp-dao-jpa-hibernate\target\classes\spring-core.xml]
+[INFO ][2017-04-28 13:55:56,702][main][org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from file [D:\work\svn_home\dev1.svn\sapp-modules\sapp-dao-jpa-hibernate\target\classes\spring-jpa.xml]
+[INFO ][2017-04-28 13:55:57,01][main][org.springframework.context.support.GenericApplicationContext] - Refreshing org.springframework.context.support.GenericApplicationContext@522305c2: startup date [Fri Apr 28 13:55:56 CST 2017]; root of context hierarchy
+[INFO ][2017-04-28 13:55:57,146][main][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer] - Loading properties file from class path resource [jdbc.properties]
+[INFO ][2017-04-28 13:55:57,525][main][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] - Building JPA container EntityManagerFactory for persistence unit 'default'
+[INFO ][2017-04-28 13:55:57,574][main][org.hibernate.jpa.internal.util.LogHelper] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+[INFO ][2017-04-28 13:55:57,744][main][org.hibernate.Version] - HHH000412: Hibernate Core {4.3.1.Final}
+[INFO ][2017-04-28 13:55:57,748][main][org.hibernate.cfg.Environment] - HHH000206: hibernate.properties not found
+[INFO ][2017-04-28 13:55:57,749][main][org.hibernate.cfg.Environment] - HHH000021: Bytecode provider name : javassist
+[INFO ][2017-04-28 13:55:58,55][main][org.hibernate.annotations.common.Version] - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+[WARN ][2017-04-28 13:55:58,746][main][org.hibernate.engine.jdbc.internal.JdbcServicesImpl] - HHH000342: Could not obtain connection to query metadata : Cannot create PoolableConnectionFactory (ÓÃ»§ 'sa' µÇÂ¼Ê§°Ü¡£ ClientConnectionId:12271d59-9e23-48ac-9c1f-f00627d47693)
+[INFO ][2017-04-28 13:55:58,760][main][org.hibernate.dialect.Dialect] - HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+[INFO ][2017-04-28 13:55:58,775][main][org.hibernate.engine.jdbc.internal.LobCreatorBuilder] - HHH000422: Disabling contextual LOB creation as connection was null
+[INFO ][2017-04-28 13:55:58,922][main][org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory] - HHH000397: Using ASTQueryTranslatorFactory
+[INFO ][2017-04-28 13:55:59,663][main][org.hibernate.engine.internal.StatisticalLoggingSessionEventListener] - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+[INFO ][2017-04-28 13:55:59,666][main][org.hibernate.engine.internal.StatisticalLoggingSessionEventListener] - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+[INFO ][2017-04-28 13:55:59,691][main][org.hibernate.engine.internal.StatisticalLoggingSessionEventListener] - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+[INFO ][2017-04-28 13:55:59,720][main][org.hibernate.engine.internal.StatisticalLoggingSessionEventListener] - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+[INFO ][2017-04-28 13:55:59,744][main][org.hibernate.engine.internal.StatisticalLoggingSessionEventListener] - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+[INFO ][2017-04-28 13:55:59,792][main][org.hibernate.engine.internal.StatisticalLoggingSessionEventListener] - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}

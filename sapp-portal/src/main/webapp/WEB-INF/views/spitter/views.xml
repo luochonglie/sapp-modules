@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tiles-definitions>
+	<definition name="template" template="/WEB-INF/views/main_template.jsp">
+		<put-attribute name="top"
+			value="/WEB-INF/views/tiles/spittleForm.jsp" />
+		<put-attribute name="side"
+			value="/WEB-INF/views/tiles/signinsignup.jsp" />
+	</definition>
+
+	<definition name="home" extends="template">
+		<put-attribute name="content" value="/WEB-INF/views/home.jsp" />
+	</definition>
+
+</tiles-definitions>
