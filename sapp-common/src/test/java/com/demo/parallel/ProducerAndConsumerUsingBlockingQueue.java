@@ -11,8 +11,6 @@ import java.util.concurrent.BlockingQueue;
  */
 public class ProducerAndConsumerUsingBlockingQueue {
 
-	private static boolean isDebug = false;
-
 	/**
 	 * 产品
 	 */
